@@ -31,7 +31,13 @@ export async function getReminders() {
   return result;
 }
 
-export async function createReminder(formData) {
+type CreateReminderFormData = {
+  expedienteId: string;
+  reminderDate: string; // ISO string (e.g., "2024-06-07")
+  description: string;
+};
+
+export async function createReminder(formData: CreateReminderFormData) {
   const session = await auth();
   
   if (!session?.user) {
@@ -40,7 +46,7 @@ export async function createReminder(formData) {
 
   const result = await db.insert(expedienteReminders).values({
     expedienteId: formData.expedienteId,
-    reminderDate: new Date(formData.reminderDate),
+    reminderDate: formData.reminderDate, // keep as string
     description: formData.description,
     createdByUserId: session.user.id
   }).returning();

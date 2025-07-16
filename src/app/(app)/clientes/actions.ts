@@ -21,7 +21,20 @@ export async function getClients() {
   return result;
 }
 
-export async function createClient(formData) {
+type ClientFormData = {
+  companyName: string;
+  businessName?: string | null;
+  email?: string | null;
+  phone?: string | null;
+  address?: string | null;
+  paymentMethod?: string | null;
+  feeSchedule?: string | null;
+  vehicleDatabaseRef?: string | null;
+  billingCutoffDate?: string | null;
+  isActive: boolean;
+};
+
+export async function createClient(formData: ClientFormData) {
   const session = await auth();
   
   if (!session?.user) {
@@ -37,7 +50,7 @@ export async function createClient(formData) {
     paymentMethod: formData.paymentMethod || null,
     feeSchedule: formData.feeSchedule || null,
     vehicleDatabaseRef: formData.vehicleDatabaseRef || null,
-    billingCutoffDate: formData.billingCutoffDate ? new Date(formData.billingCutoffDate) : null,
+    billingCutoffDate: formData.billingCutoffDate || null,
     isActive: formData.isActive
   }).returning();
 
