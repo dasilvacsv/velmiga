@@ -1,0 +1,520 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 24 96% 53%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 222 47% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 217 33% 17%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 216 34% 17%;
+    --sidebar-ring: 24 96% 53%;
+
+    --chart-1: 175.3 100% 35.9%; /* Verde Aquamarine */ /* [cite: 3] */
+    --chart-2: 340.3 78.1% 62.2%; /* Rosa */ /* [cite: 3] */
+    --chart-3: 175.3 80% 55%;   /* Lighter Verde */
+    --chart-4: 340.3 70% 75%;   /* Lighter Rosa */
+    --chart-5: 200 60% 60%;     /* Soft Blue */
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 24 95% 53%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 24 96% 53%;
+
+    --chart-1: 175.3 90% 55%; /* Bright Verde */
+    --chart-2: 340.3 85% 70%; /* Bright Rosa */
+    --chart-3: 175.3 70% 65%; /* Lighter Verde */
+    --chart-4: 340.3 75% 75%; /* Lighter Rosa */
+    --chart-5: 45 100% 65%;   /* Bright Yellow/Orange */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+h3 code {
+  @apply !text-lg md:!text-xl;
+}
+
+pre {
+  @apply !px-0 rounded-lg overflow-x-auto py-4;
+}
+
+pre [data-line] {
+  @apply px-4;
+}
+
+code {
+  @apply text-sm md:text-base !leading-loose;
+}
+
+pre > code {
+  counter-reset: line;
+}
+
+code[data-theme*=" "],
+code[data-theme*=" "] span {
+  color: var(--shiki-light);
+  background-color: var(--shiki-light-bg);
+}
+
+@media (prefers-color-scheme: dark) {
+  code[data-theme*=" "],
+  code[data-theme*=" "] span {
+    color: var(--shiki-dark);
+    background-color: var(--shiki-dark-bg);
+  }
+}
+
+code[data-line-numbers] {
+  counter-reset: line;
+}
+
+code[data-line-numbers] > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  @apply inline-block w-4 mr-4 text-right text-gray-500;
+}
+
+code {
+  counter-reset: line;
+}
+
+code > [data-line]::before {
+  counter-increment: line;
+  content: counter(line);
+  display: inline-block;
+  width: 1rem;
+  margin-right: 2rem;
+  text-align: right;
+  color: gray;
+}
+code[data-line-numbers-max-digits="2"] > [data-line]::before {
+  width: 2rem;
+}
+
+code[data-line-numbers-max-digits="3"] > [data-line]::before {
+  width: 3rem;
+}
+
+.search-container {
+  @apply relative;
+}
+
+.search-container input {
+  @apply pl-10 pr-4;
+}
+
+.search-container .search-icon {
+  @apply absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400;
+}
+
+.case-status-active {
+  @apply bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.case-status-pending {
+  @apply bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+.case-status-closed {
+  @apply bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium;
+}
+
+
+/* Glassmorphism styles with Velmiga colors */
+.glass-mode {
+  --glass-bg: rgba(255, 255, 255, 0.1);
+  --glass-border: rgba(217, 119, 6, 0.2); /* amber-600 */
+  --glass-text: rgba(0, 0, 0, 0.8);
+  --glass-shadow: rgba(217, 119, 6, 0.1);
+  --glass-accent: rgba(34, 197, 94, 0.2); /* green-500 */
+}
+
+.glass-mode.dark {
+  --glass-bg: rgba(0, 0, 0, 0.2);
+  --glass-border: rgba(245, 158, 11, 0.2); /* amber-500 */
+  --glass-text: rgba(255, 255, 255, 0.9);
+  --glass-shadow: rgba(245, 158, 11, 0.2);
+  --glass-accent: rgba(34, 197, 94, 0.3);
+}
+
+/* Glass mode enhanced backgrounds */
+.glass-mode .bg-white {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.glass-mode .bg-gray-800 {
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+.glass-mode .bg-gray-900 {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(25px) !important;
+  border: 1px solid var(--glass-border) !important;
+}
+
+/* Enhanced bloom effects with Velmiga colors */
+@keyframes bloom {
+  0%, 100% {
+    opacity: 0.5;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+}
+
+.bloom-effect {
+  position: relative;
+}
+
+.bloom-effect::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background: linear-gradient(45deg, 
+    rgba(217, 119, 6, 0.3),  /* amber-600 */
+    rgba(34, 197, 94, 0.3),  /* green-500 */
+    rgba(245, 158, 11, 0.3), /* amber-500 */
+    rgba(22, 163, 74, 0.3)   /* green-600 */
+  );
+  border-radius: inherit;
+  filter: blur(10px);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: -1;
+  animation: bloom 3s ease-in-out infinite;
+}
+
+.bloom-effect:hover::before {
+  opacity: 1;
+}
+
+/* Glass mode text enhancements */
+.glass-mode .text-gray-900 {
+  color: var(--glass-text) !important;
+}
+
+.glass-mode .text-white {
+  color: rgba(255, 255, 255, 0.95) !important;
+  text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+}
+
+/* Enhanced shadows for glass mode with Velmiga colors */
+.glass-mode .shadow-lg,
+.glass-mode .shadow-xl,
+.glass-mode .shadow-2xl {
+  box-shadow: 
+    0 8px 32px var(--glass-shadow),
+    0 0 0 1px var(--glass-border),
+    inset 0 1px 0 rgba(245, 158, 11, 0.1) !important;
+}
+
+/* Gradient text enhancement with Velmiga colors */
+.gradient-text {
+  background: linear-gradient(135deg, 
+    #d97706 0%,  /* amber-600 */
+    #22c55e 25%, /* green-500 */
+    #f59e0b 50%, /* amber-500 */
+    #16a34a 75%, /* green-600 */
+    #d97706 100% /* amber-600 */
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradient-shift 8s ease-in-out infinite;
+}
+
+@keyframes gradient-shift {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Enhanced focus styles with Velmiga colors */
+.glass-mode input:focus,
+.glass-mode textarea:focus,
+.glass-mode select:focus {
+  background: rgba(255, 255, 255, 0.15) !important;
+  border-color: rgba(217, 119, 6, 0.5) !important;
+  box-shadow: 
+    0 0 0 3px rgba(217, 119, 6, 0.1),
+    0 8px 32px rgba(217, 119, 6, 0.2) !important;
+}
+
+/* Improved button styles for glass mode */
+.glass-mode button {
+  backdrop-filter: blur(15px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.glass-mode button:hover {
+  transform: translateY(-1px);
+  box-shadow: 
+    0 12px 40px rgba(217, 119, 6, 0.15),
+    0 0 0 1px rgba(245, 158, 11, 0.2);
+}
+
+/* Custom scrollbar for glass mode with Velmiga colors */
+.glass-mode ::-webkit-scrollbar {
+  width: 8px;
+}
+
+.glass-mode ::-webkit-scrollbar-track {
+  background: rgba(245, 158, 11, 0.1);
+  border-radius: 4px;
+}
+
+.glass-mode ::-webkit-scrollbar-thumb {
+  background: rgba(217, 119, 6, 0.3);
+  border-radius: 4px;
+  backdrop-filter: blur(10px);
+}
+
+.glass-mode ::-webkit-scrollbar-thumb:hover {
+  background: rgba(217, 119, 6, 0.5);
+}
+
+/* Loading animations with Velmiga colors */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2s linear infinite;
+  background: linear-gradient(to right, #fef3c7 4%, #fde68a 25%, #fef3c7 36%); /* amber tones */
+  background-size: 1000px 100%;
+}
+
+.glass-mode .animate-shimmer {
+  background: linear-gradient(
+    to right,
+    rgba(245, 158, 11, 0.1) 4%,
+    rgba(217, 119, 6, 0.2) 25%,
+    rgba(245, 158, 11, 0.1) 36%
+  );
+  background-size: 1000px 100%;
+}
+
+/* Enhanced card hover effects with Velmiga colors */
+.card-hover {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+.glass-mode .card-hover:hover {
+  background: rgba(245, 158, 11, 0.2) !important;
+  box-shadow: 
+    0 20px 60px rgba(217, 119, 6, 0.2),
+    0 0 0 1px rgba(245, 158, 11, 0.3),
+    inset 0 1px 0 rgba(245, 158, 11, 0.2) !important;
+}
+
+/* Utilities for animations */
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes liquid-gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* 2. Reglas que se activan SOLO con .glass-mode
+   Apuntamos a .main-navbar para ser específicos y no afectar otros elementos.
+*/
+.glass-mode .main-navbar {
+  /* Anulamos los fondos estáticos de Tailwind usando !important para ganar la "guerra de especificidad" */
+  background: transparent !important;
+  
+  /* El gradiente líquido animado con tus colores Velmiga */
+  background-image: linear-gradient(
+    -45deg,
+    rgba(217, 119, 6, 0.15), /* amber-600 */
+    rgba(34, 197, 94, 0.1),  /* green-500 */
+    rgba(245, 158, 11, 0.2),  /* amber-500 */
+    rgba(22, 163, 74, 0.15)   /* green-600 */
+  );
+  background-size: 400% 400%;
+  animation: liquid-gradient 15s ease-in-out infinite;
+
+  /* El efecto "glass" mejorado */
+  backdrop-filter: blur(24px) saturate(160%);
+  -webkit-backdrop-filter: blur(24px) saturate(160%);
+
+  /* Anulamos y reemplazamos el borde y la sombra de Tailwind */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+  box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1) !important;
+}
+
+/* 3. Ajustes para el modo oscuro cuando .glass-mode está activo */
+.glass-mode.dark .main-navbar {
+   background-image: linear-gradient(
+    -45deg,
+    rgba(217, 119, 6, 0.2),
+    rgba(34, 197, 94, 0.15),
+    rgba(245, 158, 11, 0.25),
+    rgba(22, 163, 74, 0.15)
+  );
+  background-size: 400% 400%;
+  animation: liquid-gradient 15s ease-in-out infinite;
+  
+  border-bottom-color: rgba(255, 255, 255, 0.08) !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-glow {
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 5px rgba(217, 119, 6, 0.4);
+  }
+  to {
+    box-shadow: 0 0 20px rgba(217, 119, 6, 0.8), 0 0 30px rgba(217, 119, 6, 0.4);
+  }
+}
+
+/* Velmiga specific color utilities */
+.text-Velmiga-gold {
+  color: #d97706; /* amber-600 */
+}
+
+.text-Velmiga-green {
+  color: #16a34a; /* green-600 */
+}
+
+.bg-Velmiga-gold {
+  background-color: #d97706;
+}
+
+.bg-Velmiga-green {
+  background-color: #16a34a;
+}
+
+.border-Velmiga-gold {
+  border-color: #d97706;
+}
+
+.border-Velmiga-green {
+  border-color: #16a34a;
+}
+
+/* Hover states for Velmiga colors */
+.hover\:text-Velmiga-gold:hover {
+  color: #f59e0b; /* amber-500 */
+}
+
+.hover\:text-Velmiga-green:hover {
+  color: #22c55e; /* green-500 */
+}
+
+.hover\:bg-Velmiga-gold:hover {
+  background-color: #f59e0b;
+}
+
+.hover\:bg-Velmiga-green:hover {
+  background-color: #22c55e;
+}

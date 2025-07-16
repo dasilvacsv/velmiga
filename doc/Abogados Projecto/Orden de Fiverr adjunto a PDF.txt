@@ -1,0 +1,10 @@
+Sistema discutido sin la integración API enfocado en : 
+
+1 - Panorama de casos 
+2 - Casos
+3 - Reporte avanzado
+4 - Tareas
+5 - Calendario
+6 - Plantillas
+
+Y funciones necesarias para el sistema como login, registro ect
