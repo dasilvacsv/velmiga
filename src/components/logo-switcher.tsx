@@ -1,57 +1,38 @@
-// LogoSwitcher.tsx (MODIFICADO CON COLOR ACENTUADO)
+// components/layout/LogoSwitcher.tsx
 'use client';
 
 import React from 'react';
 import Image from 'next/image';
-
-interface LogoConfig {
-  id: string;
-  name: string;
-  path: string;
-  width: number;
-  height: number;
-}
-
+import { cn } from "@/lib/utils";
 
 interface LogoSwitcherProps {
   className?: string;
-  iconOnly?: boolean;
-  iconSizeClass?: string;
 }
 
-export const LogoSwitcher: React.FC<LogoSwitcherProps> = ({ className = '', iconOnly = false, iconSizeClass = 'w-12 h-12' }) => {
- 
-
-  const logoContent = (
-    <div className={`relative flex items-center justify-center bg-gray-800 dark:bg-black rounded-full p-1.5 shadow-lg ${iconSizeClass}`}>
-    </div>
-  );
-
-  if (iconOnly) {
-    return logoContent;
-  }
-
+export const LogoSwitcher: React.FC<LogoSwitcherProps> = ({ className = '' }) => {
   return (
-    <div className={`flex items-center gap-x-4 ${className}`}>
-      {logoContent}
-
-      {/* --- GRADIENTE DE COLOR MEJORADO AQUÍ --- */}
-      <span
+    // Contenedor principal para el logo
+    <div className={cn("relative flex items-center justify-center", className)}>
+      <Image
+        src="/vilmega.png" // Asegúrate de que vilmega.png esté en la carpeta /public
+        alt="Vilmega Logo"
+        width={55} // Ajusta el tamaño según sea necesario
+        height={55}
+        priority // Ayuda a que el logo cargue más rápido
         className="
-          font-cinzel
-          text-3xl
-          font-bold
-          tracking-wider
-          bg-gradient-to-r from-amber-600 via-amber-400 to-yellow-500 /* <-- GRADIENTE MÁS RICO Y ACENTUADO */
-          bg-clip-text
-          text-transparent
-          [text-shadow:_0_2px_3px_rgb(0_0_0_/_25%)] /* <-- Sombra ligeramente más intensa */
-          dark:[text-shadow:_0_2px_4px_rgb(0_0_0_/_50%)]
+          transition-all 
+          duration-500 
+          ease-in-out
+          
+          /* Efecto NEÓN usando el filtro drop-shadow y la variable --primary de tu CSS.
+            Consiste en múltiples sombras superpuestas para crear el resplandor.
+          */
+          [filter:drop-shadow(0_0_2px_hsl(var(--primary)/0.8))_drop-shadow(0_0_8px_hsl(var(--primary)/0.5))]
+          
+          /* Efecto intensificado al pasar el cursor por encima */
+          hover:[filter:drop-shadow(0_0_3px_hsl(var(--primary)))_drop-shadow(0_0_12px_hsl(var(--primary)/0.6))]
         "
-      >
-        Vilmega
-      </span>
-      
+      />
     </div>
   );
 };

@@ -4,95 +4,99 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Colores base de la imagen (Modo Claro) */
+    --background: 210 25% 98%; /* Gris azulado muy claro para el fondo */
+    --foreground: 205 30% 25%; /* Azul oscuro para el texto principal */
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 100%; /* Blanco */
+    --card-foreground: 205 30% 25%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 205 30% 25%;
 
-    --primary: 24 96% 53%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 176 100% 33%;  /* Verde/Teal principal de la UI */
+    --primary-foreground: 0 0% 100%; /* Texto blanco para el color primario */
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 214 20% 93%; /* Gris claro para fondos secundarios (fila seleccionada) */
+    --secondary-foreground: 205 30% 25%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 214 20% 93%;
+    --muted-foreground: 215 16% 50%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 176 100% 40%; /* Un verde/teal ligeramente más brillante para hover/accent */
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 214 20% 90%;
+    --input: 214 20% 90%;
+    --ring: 176 100% 33%;
 
     --radius: 0.5rem;
 
-    --sidebar-background: 222 47% 11%;
-    --sidebar-foreground: 210 40% 98%;
-    --sidebar-primary: 24 95% 53%;
+    /* Variables específicas del Sidebar */
+    --sidebar-background: 187 100% 21%; /* Teal oscuro del sidebar */
+    --sidebar-foreground: 0 0% 100%;
+    --sidebar-primary: 176 100% 33%; /* Color para el ítem activo */
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 217 33% 17%;
-    --sidebar-accent-foreground: 210 40% 98%;
-    --sidebar-border: 216 34% 17%;
-    --sidebar-ring: 24 96% 53%;
+    --sidebar-accent: 187 80% 28%; /* Color para hover en el sidebar */
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 187 80% 28%;
+    --sidebar-ring: 176 100% 33%;
 
-    --chart-1: 175.3 100% 35.9%; /* Verde Aquamarine */ /* [cite: 3] */
-    --chart-2: 340.3 78.1% 62.2%; /* Rosa */ /* [cite: 3] */
-    --chart-3: 175.3 80% 55%;   /* Lighter Verde */
-    --chart-4: 340.3 70% 75%;   /* Lighter Rosa */
-    --chart-5: 200 60% 60%;     /* Soft Blue */
+    --chart-1: 176 100% 33%;
+    --chart-2: 187 100% 21%;
+    --chart-3: 176 80% 55%;
+    --chart-4: 187 80% 35%;
+    --chart-5: 200 60% 60%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    /* Paleta derivada para Modo Oscuro */
+    --background: 205 20% 10%; /* Azul muy oscuro */
+    --foreground: 210 20% 95%; /* Blanco grisáceo */
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 205 20% 12%;
+    --card-foreground: 210 20% 95%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 205 20% 10%;
+    --popover-foreground: 210 20% 95%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 176 80% 45%; /* Verde/Teal más brillante para contraste */
+    --primary-foreground: 205 20% 10%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 205 20% 18%;
+    --secondary-foreground: 210 20% 95%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 205 20% 18%;
+    --muted-foreground: 215 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 176 80% 55%;
+    --accent-foreground: 205 20% 10%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 24 95% 53%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 24 96% 53%;
+    --border: 205 20% 18%;
+    --input: 205 20% 18%;
+    --ring: 176 80% 45%;
 
-    --chart-1: 175.3 90% 55%; /* Bright Verde */
-    --chart-2: 340.3 85% 70%; /* Bright Rosa */
-    --chart-3: 175.3 70% 65%; /* Lighter Verde */
-    --chart-4: 340.3 75% 75%; /* Lighter Rosa */
-    --chart-5: 45 100% 65%;   /* Bright Yellow/Orange */
+    /* Variables del Sidebar para modo oscuro */
+    --sidebar-background: 205 20% 8%; /* Aún más oscuro que el fondo principal */
+    --sidebar-foreground: 210 20% 95%;
+    --sidebar-primary: 176 80% 45%;
+    --sidebar-primary-foreground: 205 20% 10%;
+    --sidebar-accent: 205 20% 15%;
+    --sidebar-accent-foreground: 210 20% 95%;
+    --sidebar-border: 205 20% 15%;
+    --sidebar-ring: 176 80% 45%;
+
+    --chart-1: 176 80% 45%;
+    --chart-2: 187 80% 35%;
+    --chart-3: 176 70% 65%;
+    --chart-4: 187 70% 50%;
+    --chart-5: 200 60% 70%;
   }
 }
 
@@ -194,40 +198,29 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   @apply bg-gray-100 text-gray-800 px-2 py-1 rounded-full text-xs font-medium;
 }
 
-
 /* Glassmorphism styles with Vilmega colors */
 .glass-mode {
   --glass-bg: rgba(255, 255, 255, 0.1);
-  --glass-border: rgba(217, 119, 6, 0.2); /* amber-600 */
+  --glass-border: hsla(var(--primary) / 0.2);
   --glass-text: rgba(0, 0, 0, 0.8);
-  --glass-shadow: rgba(217, 119, 6, 0.1);
-  --glass-accent: rgba(34, 197, 94, 0.2); /* green-500 */
+  --glass-shadow: hsla(var(--primary) / 0.1);
+  --glass-accent: hsla(var(--accent) / 0.2);
 }
 
 .glass-mode.dark {
   --glass-bg: rgba(0, 0, 0, 0.2);
-  --glass-border: rgba(245, 158, 11, 0.2); /* amber-500 */
+  --glass-border: hsla(var(--primary) / 0.2);
   --glass-text: rgba(255, 255, 255, 0.9);
-  --glass-shadow: rgba(245, 158, 11, 0.2);
-  --glass-accent: rgba(34, 197, 94, 0.3);
+  --glass-shadow: hsla(var(--primary) / 0.2);
+  --glass-accent: hsla(var(--accent) / 0.3);
 }
 
 /* Glass mode enhanced backgrounds */
-.glass-mode .bg-white {
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(20px) !important;
-  border: 1px solid var(--glass-border) !important;
-}
-
-.glass-mode .bg-gray-800 {
-  background: var(--glass-bg) !important;
-  backdrop-filter: blur(20px) !important;
-  border: 1px solid var(--glass-border) !important;
-}
-
+.glass-mode .bg-white,
+.glass-mode .bg-gray-800,
 .glass-mode .bg-gray-900 {
-  background: rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(25px) !important;
+  background: var(--glass-bg) !important;
+  backdrop-filter: blur(20px) !important;
   border: 1px solid var(--glass-border) !important;
 }
 
@@ -252,10 +245,10 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   position: absolute;
   inset: -2px;
   background: linear-gradient(45deg, 
-    rgba(217, 119, 6, 0.3),  /* amber-600 */
-    rgba(34, 197, 94, 0.3),  /* green-500 */
-    rgba(245, 158, 11, 0.3), /* amber-500 */
-    rgba(22, 163, 74, 0.3)   /* green-600 */
+    hsla(var(--primary) / 0.3),
+    hsla(var(--accent) / 0.3),
+    hsla(var(--primary) / 0.3),
+    hsla(var(--accent) / 0.3)
   );
   border-radius: inherit;
   filter: blur(10px);
@@ -276,7 +269,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 .glass-mode .text-white {
   color: rgba(255, 255, 255, 0.95) !important;
-  text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
+  text-shadow: 0 0 10px hsla(var(--primary) / 0.3);
 }
 
 /* Enhanced shadows for glass mode with Vilmega colors */
@@ -286,17 +279,15 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   box-shadow: 
     0 8px 32px var(--glass-shadow),
     0 0 0 1px var(--glass-border),
-    inset 0 1px 0 rgba(245, 158, 11, 0.1) !important;
+    inset 0 1px 0 hsla(var(--primary) / 0.1) !important;
 }
 
 /* Gradient text enhancement with Vilmega colors */
 .gradient-text {
   background: linear-gradient(135deg, 
-    #d97706 0%,  /* amber-600 */
-    #22c55e 25%, /* green-500 */
-    #f59e0b 50%, /* amber-500 */
-    #16a34a 75%, /* green-600 */
-    #d97706 100% /* amber-600 */
+    hsl(var(--primary)) 0%,
+    hsl(var(--accent)) 50%,
+    hsl(var(--primary)) 100%
   );
   background-size: 400% 400%;
   -webkit-background-clip: text;
@@ -319,10 +310,10 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .glass-mode textarea:focus,
 .glass-mode select:focus {
   background: rgba(255, 255, 255, 0.15) !important;
-  border-color: rgba(217, 119, 6, 0.5) !important;
+  border-color: hsla(var(--primary) / 0.5) !important;
   box-shadow: 
-    0 0 0 3px rgba(217, 119, 6, 0.1),
-    0 8px 32px rgba(217, 119, 6, 0.2) !important;
+    0 0 0 3px hsla(var(--primary) / 0.1),
+    0 8px 32px hsla(var(--primary) / 0.2) !important;
 }
 
 /* Improved button styles for glass mode */
@@ -334,8 +325,8 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 .glass-mode button:hover {
   transform: translateY(-1px);
   box-shadow: 
-    0 12px 40px rgba(217, 119, 6, 0.15),
-    0 0 0 1px rgba(245, 158, 11, 0.2);
+    0 12px 40px hsla(var(--primary) / 0.15),
+    0 0 0 1px hsla(var(--accent) / 0.2);
 }
 
 /* Custom scrollbar for glass mode with Vilmega colors */
@@ -344,18 +335,18 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .glass-mode ::-webkit-scrollbar-track {
-  background: rgba(245, 158, 11, 0.1);
+  background: hsla(var(--primary) / 0.1);
   border-radius: 4px;
 }
 
 .glass-mode ::-webkit-scrollbar-thumb {
-  background: rgba(217, 119, 6, 0.3);
+  background: hsla(var(--primary) / 0.3);
   border-radius: 4px;
   backdrop-filter: blur(10px);
 }
 
 .glass-mode ::-webkit-scrollbar-thumb:hover {
-  background: rgba(217, 119, 6, 0.5);
+  background: hsla(var(--primary) / 0.5);
 }
 
 /* Loading animations with Vilmega colors */
@@ -370,16 +361,16 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 .animate-shimmer {
   animation: shimmer 2s linear infinite;
-  background: linear-gradient(to right, #fef3c7 4%, #fde68a 25%, #fef3c7 36%); /* amber tones */
+  background: linear-gradient(to right, hsl(var(--secondary)) 4%, hsl(var(--muted)) 25%, hsl(var(--secondary)) 36%);
   background-size: 1000px 100%;
 }
 
 .glass-mode .animate-shimmer {
   background: linear-gradient(
     to right,
-    rgba(245, 158, 11, 0.1) 4%,
-    rgba(217, 119, 6, 0.2) 25%,
-    rgba(245, 158, 11, 0.1) 36%
+    hsla(var(--primary) / 0.1) 4%,
+    hsla(var(--primary) / 0.2) 25%,
+    hsla(var(--primary) / 0.1) 36%
   );
   background-size: 1000px 100%;
 }
@@ -394,11 +385,11 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 .glass-mode .card-hover:hover {
-  background: rgba(245, 158, 11, 0.2) !important;
+  background: hsla(var(--primary) / 0.2) !important;
   box-shadow: 
-    0 20px 60px rgba(217, 119, 6, 0.2),
-    0 0 0 1px rgba(245, 158, 11, 0.3),
-    inset 0 1px 0 rgba(245, 158, 11, 0.2) !important;
+    0 20px 60px hsla(var(--primary) / 0.2),
+    0 0 0 1px hsla(var(--accent) / 0.3),
+    inset 0 1px 0 hsla(var(--accent) / 0.2) !important;
 }
 
 /* Utilities for animations */
@@ -412,45 +403,31 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   100% { background-position: 0% 50%; }
 }
 
-/* 2. Reglas que se activan SOLO con .glass-mode
-   Apuntamos a .main-navbar para ser específicos y no afectar otros elementos.
-*/
 .glass-mode .main-navbar {
-  /* Anulamos los fondos estáticos de Tailwind usando !important para ganar la "guerra de especificidad" */
   background: transparent !important;
-  
-  /* El gradiente líquido animado con tus colores Vilmega */
   background-image: linear-gradient(
     -45deg,
-    rgba(217, 119, 6, 0.15), /* amber-600 */
-    rgba(34, 197, 94, 0.1),  /* green-500 */
-    rgba(245, 158, 11, 0.2),  /* amber-500 */
-    rgba(22, 163, 74, 0.15)   /* green-600 */
+    hsla(var(--primary) / 0.15),
+    hsla(var(--accent) / 0.1),
+    hsla(var(--primary) / 0.2),
+    hsla(var(--accent) / 0.15)
   );
   background-size: 400% 400%;
   animation: liquid-gradient 15s ease-in-out infinite;
-
-  /* El efecto "glass" mejorado */
   backdrop-filter: blur(24px) saturate(160%);
   -webkit-backdrop-filter: blur(24px) saturate(160%);
-
-  /* Anulamos y reemplazamos el borde y la sombra de Tailwind */
   border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
-  box-shadow: 0 8px 32px rgba(22, 163, 74, 0.1) !important;
+  box-shadow: 0 8px 32px hsla(var(--primary) / 0.1) !important;
 }
 
-/* 3. Ajustes para el modo oscuro cuando .glass-mode está activo */
 .glass-mode.dark .main-navbar {
-   background-image: linear-gradient(
+  background-image: linear-gradient(
     -45deg,
-    rgba(217, 119, 6, 0.2),
-    rgba(34, 197, 94, 0.15),
-    rgba(245, 158, 11, 0.25),
-    rgba(22, 163, 74, 0.15)
+    hsla(var(--primary) / 0.2),
+    hsla(var(--accent) / 0.15),
+    hsla(var(--primary) / 0.25),
+    hsla(var(--accent) / 0.15)
   );
-  background-size: 400% 400%;
-  animation: liquid-gradient 15s ease-in-out infinite;
-  
   border-bottom-color: rgba(255, 255, 255, 0.08) !important;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3) !important;
 }
@@ -470,51 +447,34 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 
 @keyframes glow {
   from {
-    box-shadow: 0 0 5px rgba(217, 119, 6, 0.4);
+    box-shadow: 0 0 5px hsla(var(--primary) / 0.4);
   }
   to {
-    box-shadow: 0 0 20px rgba(217, 119, 6, 0.8), 0 0 30px rgba(217, 119, 6, 0.4);
+    box-shadow: 0 0 20px hsla(var(--primary) / 0.8), 0 0 30px hsla(var(--primary) / 0.4);
   }
 }
 
 /* Vilmega specific color utilities */
-.text-Vilmega-gold {
-  color: #d97706; /* amber-600 */
+.text-vilmega-primary {
+  color: hsl(var(--primary));
 }
 
-.text-Vilmega-green {
-  color: #16a34a; /* green-600 */
+.text-vilmega-accent {
+  color: hsl(var(--accent));
 }
 
-.bg-Vilmega-gold {
-  background-color: #d97706;
+.bg-vilmega-primary {
+  background-color: hsl(var(--primary));
 }
 
-.bg-Vilmega-green {
-  background-color: #16a34a;
+.bg-vilmega-accent {
+  background-color: hsl(var(--accent));
 }
 
-.border-Vilmega-gold {
-  border-color: #d97706;
+.border-vilmega-primary {
+  border-color: hsl(var(--primary));
 }
 
-.border-Vilmega-green {
-  border-color: #16a34a;
-}
-
-/* Hover states for Vilmega colors */
-.hover\:text-Vilmega-gold:hover {
-  color: #f59e0b; /* amber-500 */
-}
-
-.hover\:text-Vilmega-green:hover {
-  color: #22c55e; /* green-500 */
-}
-
-.hover\:bg-Vilmega-gold:hover {
-  background-color: #f59e0b;
-}
-
-.hover\:bg-Vilmega-green:hover {
-  background-color: #22c55e;
+.border-vilmega-accent {
+  border-color: hsl(var(--accent));
 }

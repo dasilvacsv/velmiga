@@ -35,6 +35,7 @@ import Link from "next/link";
 import { useRouter } from 'next/navigation';
 import { toast } from 'sonner';
 import { FIELD_NAMES, FIELD_TYPES } from './contants';
+import { LogoSwitcher } from '@/components/logo-switcher'; // Importamos el LogoSwitcher
 
 interface Props<T extends FieldValues> {
     schema: ZodType<T>;
@@ -79,8 +80,11 @@ const AuthForm = <T extends FieldValues>({
     };
 
     return (
-        <Card className="w-full max-w-md mx-auto border-none shadow-none">
-            <CardHeader className="text-center">
+        // --- TARJETA CON ESTILO MEJORADO ---
+        <Card className="w-full max-w-md mx-auto border shadow-2xl shadow-primary/10 bg-card/80 backdrop-blur-sm">
+            {/* --- HEADER CON LOGO Y TEXTOS CENTRADOS --- */}
+            <CardHeader className="text-center flex flex-col items-center gap-y-4">
+                <LogoSwitcher />
                 <CardTitle className="text-2xl font-bold">
                     {isSignIn ? "Bienvenido de nuevo" : "Crea una cuenta"}
                 </CardTitle>
@@ -123,7 +127,7 @@ const AuthForm = <T extends FieldValues>({
                                                         type="button"
                                                         variant="ghost"
                                                         size="icon"
-                                                        className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8"
+                                                        className="absolute right-1 top-1/2 -translate-y-1/2 h-8 w-8 text-muted-foreground"
                                                         onClick={() => setShowPassword(!showPassword)}
                                                     >
                                                         {showPassword ? <EyeOffIcon className="h-5 w-5" /> : <EyeIcon className="h-5 w-5" />}
@@ -137,9 +141,10 @@ const AuthForm = <T extends FieldValues>({
                             />
                         ))}
 
+                        {/* --- BOTÓN CON EFECTO DE RESPLANDOR --- */}
                         <Button 
                             type="submit" 
-                            className="w-full h-11"
+                            className="w-full h-11 animate-glow" // Añadimos la clase para el efecto neón
                             disabled={isSubmitting}
                         >
                             {isSubmitting && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
