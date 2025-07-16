@@ -129,7 +129,7 @@ export function SystemReports() {
                   Reportes del Sistema
                 </h1>
                 <p className="text-slate-600">
-                  Análisis y métricas de rendimiento de Velmiga
+                  Análisis y métricas de rendimiento de Vilmega
                 </p>
               </div>
             </div>

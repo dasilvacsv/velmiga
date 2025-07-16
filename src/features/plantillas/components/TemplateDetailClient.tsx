@@ -94,7 +94,7 @@ export function TemplateDetailClient({ initialTemplate }: TemplateDetailClientPr
   return (
     <div className="min-h-screen bg-yellow-50">
       <form onSubmit={handleSubmit}>
-        {/* Enhanced Header con branding Velmiga */}
+        {/* Enhanced Header con branding Vilmega */}
         <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-xl border-b border-yellow-200/80 shadow-sm">
           <div className="max-w-screen-2xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
             <div className="flex items-center gap-4">
@@ -118,7 +118,7 @@ export function TemplateDetailClient({ initialTemplate }: TemplateDetailClientPr
                     {template.templateName || "Nueva Plantilla"}
                   </span>
                   <div className="text-xs text-yellow-600">
-                    Velmiga - Última modificación: {formatDate(template.updatedAt)}
+                    Vilmega - Última modificación: {formatDate(template.updatedAt)}
                   </div>
                 </div>
               </div>

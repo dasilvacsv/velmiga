@@ -266,7 +266,7 @@ const TemplateDocumentPDF = ({ content, caseName, templateName }: {
         <View style={styles.headerLeft}>
           <Text style={styles.title}>{templateName}</Text>
           <Text style={styles.subtitle}>Documento generado para el caso: {caseName}</Text>
-          <Text style={styles.companyInfo}>Sistema Legal de Velmiga</Text>
+          <Text style={styles.companyInfo}>Sistema Legal de Vilmega</Text>
         </View>
         <View style={styles.headerRight}>
           <Text style={styles.companyInfo}>Fecha: {formatDateEcuador(new Date())}</Text>
@@ -279,7 +279,7 @@ const TemplateDocumentPDF = ({ content, caseName, templateName }: {
 
       <View style={styles.footer}>
         <Text style={styles.footerText}>
-          Documento generado automáticamente por Velmiga
+          Documento generado automáticamente por Vilmega
         </Text>
         <Text style={styles.footerText}>
           {formatDateTimeEcuador(new Date())}

@@ -135,7 +135,7 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = ({
           size="sm" 
           className={`${className} relative overflow-hidden transition-all duration-300 hover:scale-105`}
         >
-          {/* Efecto de bloom con colores Velmiga */}
+          {/* Efecto de bloom con colores Vilmega */}
           <div className="absolute inset-0 bg-gradient-to-r from-amber-500/20 to-green-600/20 opacity-0 hover:opacity-100 transition-opacity duration-300 blur-sm"></div>
           <div className="relative z-10">
             {getCurrentIcon()}

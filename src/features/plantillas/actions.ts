@@ -747,7 +747,7 @@ export async function getTemplateVariablesForCase(caseId: string): Promise<Recor
       'lawyer.role': user?.role || '',
 
       // Variables del despacho
-      'firm.name': 'Velmiga - Despacho Jurídico',
+      'firm.name': 'Vilmega - Despacho Jurídico',
       'firm.address': '',
       'firm.phone': '',
       'firm.email': '',

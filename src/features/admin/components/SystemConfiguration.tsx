@@ -61,7 +61,7 @@ interface SystemConfig {
 export function SystemConfiguration() {
   const [config, setConfig] = useState<SystemConfig>({
     general: {
-      siteName: 'Velmiga Legal',
+      siteName: 'Vilmega Legal',
       siteDescription: 'Sistema de Gestión Legal Profesional',
       timezone: 'America/Caracas',
       language: 'es',
@@ -72,8 +72,8 @@ export function SystemConfiguration() {
       smtpPort: '587',
       smtpUser: '',
       smtpPassword: '',
-      fromEmail: 'noreply@Velmiga.legal',
-      fromName: 'Velmiga Legal',
+      fromEmail: 'noreply@Vilmega.legal',
+      fromName: 'Vilmega Legal',
       enableSSL: true,
     },
     security: {
@@ -163,7 +163,7 @@ export function SystemConfiguration() {
                   Configuración del Sistema
                 </h1>
                 <p className="text-slate-600">
-                  Administrar configuraciones globales de Velmiga
+                  Administrar configuraciones globales de Vilmega
                 </p>
               </div>
             </div>
@@ -277,8 +277,8 @@ export function SystemConfiguration() {
                     <div className="space-y-2"><Label htmlFor="smtpPassword">Contraseña SMTP</Label><div className="relative"><Input id="smtpPassword" type={showPasswords ? "text" : "password"} value={config.email.smtpPassword} onChange={(e) => updateConfig('email', 'smtpPassword', e.target.value)} placeholder="Contraseña del servidor"/><Button type="button" variant="ghost" size="sm" className="absolute right-0 top-0 h-full px-3" onClick={() => setShowPasswords(!showPasswords)}>{showPasswords ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}</Button></div></div>
                   </div>
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="space-y-2"><Label htmlFor="fromEmail">Email Remitente</Label><Input id="fromEmail" value={config.email.fromEmail} onChange={(e) => updateConfig('email', 'fromEmail', e.target.value)} placeholder="noreply@Velmiga.legal"/></div>
-                    <div className="space-y-2"><Label htmlFor="fromName">Nombre Remitente</Label><Input id="fromName" value={config.email.fromName} onChange={(e) => updateConfig('email', 'fromName', e.target.value)} placeholder="Velmiga Legal"/></div>
+                    <div className="space-y-2"><Label htmlFor="fromEmail">Email Remitente</Label><Input id="fromEmail" value={config.email.fromEmail} onChange={(e) => updateConfig('email', 'fromEmail', e.target.value)} placeholder="noreply@Vilmega.legal"/></div>
+                    <div className="space-y-2"><Label htmlFor="fromName">Nombre Remitente</Label><Input id="fromName" value={config.email.fromName} onChange={(e) => updateConfig('email', 'fromName', e.target.value)} placeholder="Vilmega Legal"/></div>
                   </div>
                   <div className="flex items-center justify-between p-4 bg-green-50 rounded-lg border border-green-200">
                     <div className="flex items-center gap-3"><Lock className="h-5 w-5 text-green-600" /><div><Label htmlFor="enableSSL" className="text-green-800 font-medium">Habilitar SSL/TLS</Label><p className="text-sm text-green-700">Conexión segura al servidor SMTP</p></div></div>

@@ -122,8 +122,8 @@ export function getTaskStatusColor(status: string): string {
   }
 }
 
-// Velmiga Brand Colors - Official Palette
-export const VelmigaColors = {
+// Vilmega Brand Colors - Official Palette
+export const VilmegaColors = {
   // Amarillos/Dorados principales
   primary: {
     50: '#fefce8',
@@ -131,7 +131,7 @@ export const VelmigaColors = {
     200: '#fef08a',
     300: '#fde047',
     400: '#facc15',
-    500: '#eab308', // Color principal amarillo Velmiga
+    500: '#eab308', // Color principal amarillo Vilmega
     600: '#ca8a04',
     700: '#a16207',
     800: '#854d0e',
@@ -152,14 +152,14 @@ export const VelmigaColors = {
     900: '#0c4a6e',
   },
 
-  // Verdes Velmiga
+  // Verdes Vilmega
   accent: {
     50: '#f7fee7',
     100: '#ecfccb',
     200: '#d9f99d',
     300: '#bef264',
     400: '#a3e635',
-    500: '#84cc16', // Verde principal Velmiga
+    500: '#84cc16', // Verde principal Vilmega
     600: '#65a30d',
     700: '#4d7c0f',
     800: '#365314',
@@ -181,26 +181,26 @@ export const VelmigaColors = {
   }
 };
 
-// Funciones de utilidad para los colores de Velmiga
-export function getVelmigaColor(shade: 'light' | 'medium' | 'dark' = 'medium') {
+// Funciones de utilidad para los colores de Vilmega
+export function getVilmegaColor(shade: 'light' | 'medium' | 'dark' = 'medium') {
   switch (shade) {
     case 'light':
-      return VelmigaColors.primary[300];
+      return VilmegaColors.primary[300];
     case 'dark':
-      return VelmigaColors.primary[700];
+      return VilmegaColors.primary[700];
     default:
-      return VelmigaColors.primary[500];
+      return VilmegaColors.primary[500];
   }
 }
 
-export function getVelmigaGreen(shade: 'light' | 'medium' | 'dark' = 'medium') {
+export function getVilmegaGreen(shade: 'light' | 'medium' | 'dark' = 'medium') {
   switch (shade) {
     case 'light':
-      return VelmigaColors.accent[300];
+      return VilmegaColors.accent[300];
     case 'dark':
-      return VelmigaColors.accent[700];
+      return VilmegaColors.accent[700];
     default:
-      return VelmigaColors.accent[500];
+      return VilmegaColors.accent[500];
   }
 }
 
@@ -252,14 +252,14 @@ export function generateExcelFilename(type: string, dateRange?: { start: Date; e
     ? `_${formatDateEcuador(dateRange.start)}_${formatDateEcuador(dateRange.end)}`.replace(/\s+/g, '_')
     : '';
 
-  return `Velmiga_${type}${dateRangeStr}_${timestamp}.xlsx`;
+  return `Vilmega_${type}${dateRangeStr}_${timestamp}.xlsx`;
 }
 
 export function generatePDFFilename(type: string, entityName?: string): string {
   const timestamp = formatDateEcuador(new Date()).replace(/\s+/g, '_');
   const entityStr = entityName ? `_${entityName.replace(/[^a-zA-Z0-9]/g, '_')}` : '';
 
-  return `Velmiga_${type}${entityStr}_${timestamp}.pdf`;
+  return `Vilmega_${type}${entityStr}_${timestamp}.pdf`;
 }
 
 // Funciones de fecha para calendario
@@ -302,8 +302,8 @@ export function createGoogleCalendarNotificationText(event: any): string {
   return `Recordatorio: Tienes un evento el ${formatDate(eventDate)} - ${event.title}`;
 }
 
-// Función para obtener el color de prioridad usando la paleta Velmiga
-export function getVelmigaTaskPriorityColor(priority: string) {
+// Función para obtener el color de prioridad usando la paleta Vilmega
+export function getVilmegaTaskPriorityColor(priority: string) {
   switch (priority.toLowerCase()) {
     case 'alta':
       return 'bg-red-50 text-red-700 border-red-200';
@@ -316,8 +316,8 @@ export function getVelmigaTaskPriorityColor(priority: string) {
   }
 }
 
-// Función para obtener el color de estado usando la paleta Velmiga
-export function getVelmigaStatusColor(status: string) {
+// Función para obtener el color de estado usando la paleta Vilmega
+export function getVilmegaStatusColor(status: string) {
   switch (status.toLowerCase()) {
     case 'activo':
     case 'pendiente':

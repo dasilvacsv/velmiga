@@ -21,8 +21,8 @@ const fontCinzel = Cinzel({
 });
 
 export const metadata = {
-  title: "Velmiga",
-  description: "Sistema de gestión de Velmiga",
+  title: "Vilmega",
+  description: "Sistema de gestión de Vilmega",
 };
 
 export default async function RootLayout({

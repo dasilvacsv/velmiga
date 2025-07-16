@@ -219,7 +219,7 @@ export function MovementsPDF({ case_ }: MovementsPDFProps) {
         <View style={styles.header}>
           <View style={styles.headerLeft}>
             <Text style={styles.title}>Historial de Movimientos</Text>
-            <Text style={styles.subtitle}>Velmiga</Text>
+            <Text style={styles.subtitle}>Vilmega</Text>
             <Text style={styles.companyInfo}>Reporte generado el {formatDate(new Date())}</Text>
           </View>
           <View style={styles.headerRight}>
@@ -345,7 +345,7 @@ export function MovementsPDF({ case_ }: MovementsPDFProps) {
         {/* Footer */}
         <View style={styles.footer}>
           <Text style={styles.footerText}>
-            Documento generado automáticamente por Velmiga
+            Documento generado automáticamente por Vilmega
           </Text>
           <Text style={styles.footerText}>
             {new Date().toLocaleString('es-ES')}

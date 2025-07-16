@@ -67,7 +67,7 @@ Es crucial poder registrar a todas las personas involucradas en un caso, no solo
 Estos cambios son necesarios para alinear el sistema con la identidad del cliente.
 
 - **Branding:**
-    - `[ ]` Cambiar el nombre del sistema de "Case Tracking" a **"Velmiga"**.
+    - `[ ]` Cambiar el nombre del sistema de "Case Tracking" a **"Vilmega"**.
     - `[ ]` Reemplazar el logo actual con el que proveerá el cliente.
     - `[ ]` **Aplicar la paleta de colores enviada por el cliente** (tonos verde oliva, dorados, blancos). El naranja y negro actual debe ser eliminado.
     - `[ ]` Cambiar la fuente de los títulos/encabezados a **"Raleway"**. Mantener una fuente de alta legibilidad (como Arial) para el cuerpo del texto y los datos.

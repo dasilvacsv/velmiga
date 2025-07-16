@@ -41,7 +41,7 @@ export default async function CasosPage() {
                 </div>
                 <div>
                   <h1 className="text-xl font-bold text-gray-900 font-inter">
-                    Velmiga - Gestión de Casos Legales
+                    Vilmega - Gestión de Casos Legales
                   </h1>
                   <p className="text-xs text-gray-600">
                     Sistema profesional de gestión legal con carga optimizada

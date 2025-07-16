@@ -195,7 +195,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
 }
 
 
-/* Glassmorphism styles with Velmiga colors */
+/* Glassmorphism styles with Vilmega colors */
 .glass-mode {
   --glass-bg: rgba(255, 255, 255, 0.1);
   --glass-border: rgba(217, 119, 6, 0.2); /* amber-600 */
@@ -231,7 +231,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   border: 1px solid var(--glass-border) !important;
 }
 
-/* Enhanced bloom effects with Velmiga colors */
+/* Enhanced bloom effects with Vilmega colors */
 @keyframes bloom {
   0%, 100% {
     opacity: 0.5;
@@ -279,7 +279,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   text-shadow: 0 0 10px rgba(245, 158, 11, 0.3);
 }
 
-/* Enhanced shadows for glass mode with Velmiga colors */
+/* Enhanced shadows for glass mode with Vilmega colors */
 .glass-mode .shadow-lg,
 .glass-mode .shadow-xl,
 .glass-mode .shadow-2xl {
@@ -289,7 +289,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     inset 0 1px 0 rgba(245, 158, 11, 0.1) !important;
 }
 
-/* Gradient text enhancement with Velmiga colors */
+/* Gradient text enhancement with Vilmega colors */
 .gradient-text {
   background: linear-gradient(135deg, 
     #d97706 0%,  /* amber-600 */
@@ -314,7 +314,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   }
 }
 
-/* Enhanced focus styles with Velmiga colors */
+/* Enhanced focus styles with Vilmega colors */
 .glass-mode input:focus,
 .glass-mode textarea:focus,
 .glass-mode select:focus {
@@ -338,7 +338,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
     0 0 0 1px rgba(245, 158, 11, 0.2);
 }
 
-/* Custom scrollbar for glass mode with Velmiga colors */
+/* Custom scrollbar for glass mode with Vilmega colors */
 .glass-mode ::-webkit-scrollbar {
   width: 8px;
 }
@@ -358,7 +358,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   background: rgba(217, 119, 6, 0.5);
 }
 
-/* Loading animations with Velmiga colors */
+/* Loading animations with Vilmega colors */
 @keyframes shimmer {
   0% {
     background-position: -468px 0;
@@ -384,7 +384,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   background-size: 1000px 100%;
 }
 
-/* Enhanced card hover effects with Velmiga colors */
+/* Enhanced card hover effects with Vilmega colors */
 .card-hover {
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -419,7 +419,7 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   /* Anulamos los fondos estáticos de Tailwind usando !important para ganar la "guerra de especificidad" */
   background: transparent !important;
   
-  /* El gradiente líquido animado con tus colores Velmiga */
+  /* El gradiente líquido animado con tus colores Vilmega */
   background-image: linear-gradient(
     -45deg,
     rgba(217, 119, 6, 0.15), /* amber-600 */
@@ -477,44 +477,44 @@ code[data-line-numbers-max-digits="3"] > [data-line]::before {
   }
 }
 
-/* Velmiga specific color utilities */
-.text-Velmiga-gold {
+/* Vilmega specific color utilities */
+.text-Vilmega-gold {
   color: #d97706; /* amber-600 */
 }
 
-.text-Velmiga-green {
+.text-Vilmega-green {
   color: #16a34a; /* green-600 */
 }
 
-.bg-Velmiga-gold {
+.bg-Vilmega-gold {
   background-color: #d97706;
 }
 
-.bg-Velmiga-green {
+.bg-Vilmega-green {
   background-color: #16a34a;
 }
 
-.border-Velmiga-gold {
+.border-Vilmega-gold {
   border-color: #d97706;
 }
 
-.border-Velmiga-green {
+.border-Vilmega-green {
   border-color: #16a34a;
 }
 
-/* Hover states for Velmiga colors */
-.hover\:text-Velmiga-gold:hover {
+/* Hover states for Vilmega colors */
+.hover\:text-Vilmega-gold:hover {
   color: #f59e0b; /* amber-500 */
 }
 
-.hover\:text-Velmiga-green:hover {
+.hover\:text-Vilmega-green:hover {
   color: #22c55e; /* green-500 */
 }
 
-.hover\:bg-Velmiga-gold:hover {
+.hover\:bg-Vilmega-gold:hover {
   background-color: #f59e0b;
 }
 
-.hover\:bg-Velmiga-green:hover {
+.hover\:bg-Vilmega-green:hover {
   background-color: #22c55e;
 }

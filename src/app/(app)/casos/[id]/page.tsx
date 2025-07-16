@@ -45,12 +45,12 @@ export async function generateMetadata({ params }: CasePageProps) {
     }
 
     return {
-      title: `${caseData.caseName} - Velmiga Legal`,
+      title: `${caseData.caseName} - Vilmega Legal`,
       description: caseData.description || `Detalles del caso ${caseData.caseName}`,
     };
   } catch (error) {
     return {
-      title: 'Error - Velmiga Legal',
+      title: 'Error - Vilmega Legal',
     };
   }
 }

@@ -518,7 +518,7 @@ export const CasesClientPage: React.FC<CasesClientPageProps> = ({
       const link = document.createElement('a');
       const url = URL.createObjectURL(blob);
       link.setAttribute('href', url);
-      link.setAttribute('download', `Tareas_Velmiga_${formatDateEcuador(new Date()).replace(/\s+/g, '_')}.csv`);
+      link.setAttribute('download', `Tareas_Vilmega_${formatDateEcuador(new Date()).replace(/\s+/g, '_')}.csv`);
       link.style.visibility = 'hidden';
       document.body.appendChild(link);
       link.click();

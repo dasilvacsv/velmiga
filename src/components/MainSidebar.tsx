@@ -84,7 +84,7 @@ export function MainSidebar({ items, user, ...props }: MainSidebarProps) {
                 />
               </div>
               <div className="flex flex-col">
-                <span className="text-base font-semibold text-sidebar-foreground">Velmiga </span>
+                <span className="text-base font-semibold text-sidebar-foreground">Vilmega </span>
                 <span className="text-xs text-sidebar-foreground/70">Sistema de Gestión</span>
               </div>
             </div>

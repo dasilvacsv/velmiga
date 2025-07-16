@@ -93,7 +93,7 @@ export function AdminDashboard() {
                 Panel de Administración
               </h1>
               <p className="text-gray-600">
-                Gestión completa del sistema Velmiga
+                Gestión completa del sistema Vilmega
               </p>
             </div>
           </div>

@@ -798,7 +798,7 @@ export function TemplateEditor({ content, onChange }: TemplateEditorProps) {
           </span>
           <div className="flex items-center gap-1">
             <div className="w-2 h-2 bg-emerald-500 rounded-full" />
-            <span className="text-emerald-600 font-medium">Velmiga - Autoguardado</span>
+            <span className="text-emerald-600 font-medium">Vilmega - Autoguardado</span>
           </div>
         </div>
       </div>

@@ -49,7 +49,7 @@ export const LogoSwitcher: React.FC<LogoSwitcherProps> = ({ className = '', icon
           dark:[text-shadow:_0_2px_4px_rgb(0_0_0_/_50%)]
         "
       >
-        Velmiga
+        Vilmega
       </span>
       
     </div>

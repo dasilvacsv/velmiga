@@ -31,8 +31,8 @@ import { createTemplate, deleteTemplate } from '../actions';
 import { Template } from '@/lib/types';
 
 // --- NUEVO COLOR PRINCIPAL BASADO EN EL LOGO ---
-const Velmiga_GREEN = '#556B2F';
-const Velmiga_GREEN_DARK = '#425225'; // Tono más oscuro para hover
+const Vilmega_GREEN = '#556B2F';
+const Vilmega_GREEN_DARK = '#425225'; // Tono más oscuro para hover
 
 interface TemplatesClientPageProps {
   initialTemplates: Template[];
@@ -347,7 +347,7 @@ function CompactTemplateStats({ stats, templates }: { stats: TemplatesClientPage
                   </Badge>
                 </div>
                 <div className="space-y-1">
-                  <div className="text-2xl font-bold" style={{ color: Velmiga_GREEN }}>{stat.value}</div>
+                  <div className="text-2xl font-bold" style={{ color: Vilmega_GREEN }}>{stat.value}</div>
                   <div className="text-xs font-medium text-green-700">{stat.title}</div>
                 </div>
               </CardContent>
@@ -386,7 +386,7 @@ function CompactSearchAndFilters({ searchTerm, setSearchTerm, statusFilter, setS
             value={searchTerm}
             onChange={(e) => setSearchTerm(e.target.value)}
             className="pl-10 transition-all focus:ring-2 border-green-200"
-            style={{ '--tw-ring-color': Velmiga_GREEN } as React.CSSProperties}
+            style={{ '--tw-ring-color': Vilmega_GREEN } as React.CSSProperties}
           />
         </div>
         <div className="flex items-center gap-2">
@@ -419,7 +419,7 @@ function CompactSearchAndFilters({ searchTerm, setSearchTerm, statusFilter, setS
               size="sm"
               onClick={() => setViewMode('grid')}
               className={`h-8 w-8 p-0 transition-colors ${viewMode === 'grid' ? 'text-white' : 'text-gray-600'}`}
-              style={{ backgroundColor: viewMode === 'grid' ? Velmiga_GREEN : 'transparent' }}
+              style={{ backgroundColor: viewMode === 'grid' ? Vilmega_GREEN : 'transparent' }}
             >
               <Grid3X3 className="h-4 w-4" />
             </Button>
@@ -428,13 +428,13 @@ function CompactSearchAndFilters({ searchTerm, setSearchTerm, statusFilter, setS
               size="sm"
               onClick={() => setViewMode('list')}
               className={`h-8 w-8 p-0 transition-colors ${viewMode === 'list' ? 'text-white' : 'text-gray-600'}`}
-              style={{ backgroundColor: viewMode === 'list' ? Velmiga_GREEN : 'transparent' }}
+              style={{ backgroundColor: viewMode === 'list' ? Vilmega_GREEN : 'transparent' }}
             >
               <List className="h-4 w-4" />
             </Button>
           </div>
 
-          <Badge variant="outline" className="border-green-200" style={{ color: Velmiga_GREEN }}>
+          <Badge variant="outline" className="border-green-200" style={{ color: Vilmega_GREEN }}>
             {templatesCount} resultados
           </Badge>
         </div>
@@ -480,7 +480,7 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
     toast.success('✅ Plantilla creada exitosamente', {
       duration: 4000,
       style: {
-        background: Velmiga_GREEN,
+        background: Vilmega_GREEN,
         color: 'white',
       },
     });
@@ -597,11 +597,11 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
             <div className="flex items-center gap-3">
               <div className="p-3 bg-green-100/70 rounded-xl">
-                <FileText className="h-8 w-8" style={{ color: Velmiga_GREEN }} />
+                <FileText className="h-8 w-8" style={{ color: Vilmega_GREEN }} />
               </div>
               <div>
-                <h1 className="text-3xl font-bold mb-1" style={{ color: Velmiga_GREEN }}>
-                  Plantillas Velmiga
+                <h1 className="text-3xl font-bold mb-1" style={{ color: Vilmega_GREEN }}>
+                  Plantillas Vilmega
                 </h1>
                 <p className="text-green-700">
                   Gestión completa de plantillas legales y casos
@@ -617,9 +617,9 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
               <NewTemplateModal onTemplateCreated={handleTemplateCreated}>
                 <Button
                   className="text-white shadow-lg gap-2 px-6"
-                  style={{ backgroundColor: Velmiga_GREEN }}
-                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN_DARK}
-                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN}
+                  style={{ backgroundColor: Vilmega_GREEN }}
+                  onMouseOver={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN_DARK}
+                  onMouseOut={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN}
                 >
                   <Plus className="h-5 w-5" /> Nueva Plantilla
                 </Button>
@@ -644,20 +644,20 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
             <TabsTrigger
               value="templates"
               className="data-[state=active]:text-white flex items-center gap-2"
-              style={{'--bg-active': Velmiga_GREEN} as any}
-              data-state-active-bg={Velmiga_GREEN}
-              onClick={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN}
-              onFocus={(e) => e.currentTarget.style.backgroundColor = activeTab === 'templates' ? Velmiga_GREEN : 'transparent'}
+              style={{'--bg-active': Vilmega_GREEN} as any}
+              data-state-active-bg={Vilmega_GREEN}
+              onClick={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN}
+              onFocus={(e) => e.currentTarget.style.backgroundColor = activeTab === 'templates' ? Vilmega_GREEN : 'transparent'}
             >
-              <style>{`.data-[state=active]:bg-\\[\\#556B2F\\] { background-color: ${Velmiga_GREEN} !important; }`}</style>
+              <style>{`.data-[state=active]:bg-\\[\\#556B2F\\] { background-color: ${Vilmega_GREEN} !important; }`}</style>
               <Layers className="h-4 w-4" />
               Plantillas
             </TabsTrigger>
             <TabsTrigger
               value="cases"
               className="data-[state=active]:text-white flex items-center gap-2"
-              onClick={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN}
-              onFocus={(e) => e.currentTarget.style.backgroundColor = activeTab === 'cases' ? Velmiga_GREEN : 'transparent'}
+              onClick={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN}
+              onFocus={(e) => e.currentTarget.style.backgroundColor = activeTab === 'cases' ? Vilmega_GREEN : 'transparent'}
             >
               <Database className="h-4 w-4" />
               Casos y Plantillas
@@ -701,7 +701,7 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
                       transition={{ duration: 0.3, delay: index * 0.05 }}
                       onClick={() => setSelectedTemplate(template)}
                       className={`rounded-xl transition-all ${selectedTemplate?.id === template.id ? 'ring-2' : ''}`}
-                      style={{'--tw-ring-color': Velmiga_GREEN} as React.CSSProperties}
+                      style={{'--tw-ring-color': Vilmega_GREEN} as React.CSSProperties}
                     >
                       <TemplateCard
                         template={template}
@@ -724,9 +724,9 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
                 >
                   <div className="max-w-md mx-auto">
                     <div className="p-4 bg-green-100 rounded-full w-16 h-16 mx-auto mb-4 flex items-center justify-center">
-                      <Sparkles className="h-8 w-8" style={{ color: Velmiga_GREEN }}/>
+                      <Sparkles className="h-8 w-8" style={{ color: Vilmega_GREEN }}/>
                     </div>
-                    <h3 className="text-xl font-semibold mb-2" style={{ color: Velmiga_GREEN }}>
+                    <h3 className="text-xl font-semibold mb-2" style={{ color: Vilmega_GREEN }}>
                       {searchTerm || statusFilter !== 'ALL'
                         ? 'No se encontraron plantillas'
                         : 'Aún no tienes plantillas'
@@ -741,9 +741,9 @@ export function TemplatesClientPage({ initialTemplates, stats }: TemplatesClient
                     <NewTemplateModal onTemplateCreated={handleTemplateCreated}>
                        <Button
                           className="text-white shadow-lg gap-2 px-6"
-                          style={{ backgroundColor: Velmiga_GREEN }}
-                          onMouseOver={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN_DARK}
-                          onMouseOut={(e) => e.currentTarget.style.backgroundColor = Velmiga_GREEN}
+                          style={{ backgroundColor: Vilmega_GREEN }}
+                          onMouseOver={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN_DARK}
+                          onMouseOut={(e) => e.currentTarget.style.backgroundColor = Vilmega_GREEN}
                       >
                         <Plus className="h-5 w-5" />
                         {templates.length === 0 ? 'Crear Primera Plantilla' : 'Nueva Plantilla'}

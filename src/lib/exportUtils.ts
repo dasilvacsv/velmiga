@@ -91,8 +91,8 @@ export async function exportToPDF(template: Template): Promise<void> {
       yPosition += 5; // Espacio adicional después del párrafo
     };
     
-    // Header con información Velmiga
-    addText('Velmiga - SISTEMA DE GESTIÓN LEGAL', 16, true);
+    // Header con información Vilmega
+    addText('Vilmega - SISTEMA DE GESTIÓN LEGAL', 16, true);
     addText('Plantilla de Documento Legal', 14, true);
     addText(`Fecha de generación: ${new Date().toLocaleDateString('es-ES')}`, 10);
     yPosition += 10;
@@ -128,7 +128,7 @@ export async function exportToPDF(template: Template): Promise<void> {
       doc.setPage(i);
       doc.setFontSize(8);
       doc.text(
-        `Página ${i} de ${totalPages} - Generado por Velmiga`,
+        `Página ${i} de ${totalPages} - Generado por Vilmega`,
         pageWidth / 2,
         pageHeight - 10,
         { align: 'center' }
@@ -232,7 +232,7 @@ export async function exportToWord(template: Template): Promise<void> {
     };
 
     const doc = new Document({
-      creator: "Velmiga - Sistema Legal",
+      creator: "Vilmega - Sistema Legal",
       title: template.templateName,
       description: template.description || "",
       sections: [{
@@ -251,7 +251,7 @@ export async function exportToWord(template: Template): Promise<void> {
           new Paragraph({
             children: [
               new TextRun({
-                text: "Velmiga - SISTEMA DE GESTIÓN LEGAL",
+                text: "Vilmega - SISTEMA DE GESTIÓN LEGAL",
                 bold: true,
                 size: 36,
                 color: "1f2937"
@@ -427,7 +427,7 @@ export async function exportToWord(template: Template): Promise<void> {
           new Paragraph({
             children: [
               new TextRun({
-                text: "Documento generado automáticamente por Velmiga - Sistema de Gestión Legal",
+                text: "Documento generado automáticamente por Vilmega - Sistema de Gestión Legal",
                 italics: true,
                 size: 20,
                 color: "6b7280"
@@ -520,7 +520,7 @@ export async function exportToExcel(templates: Template[]): Promise<void> {
     ws1['!cols'] = wscols;
     
     // Descargar archivo
-    XLSX.writeFile(wb, `plantillas_Velmiga_${new Date().toISOString().split('T')[0]}.xlsx`);
+    XLSX.writeFile(wb, `plantillas_Vilmega_${new Date().toISOString().split('T')[0]}.xlsx`);
   } catch (error) {
     console.error('Error exportando Excel:', error);
     throw new Error('Error al generar el archivo Excel');
@@ -761,7 +761,7 @@ export function downloadImportTemplate(): void {
       'Tarea': 'Revisar documentos iniciales',
       'Prioridad': 'ALTA',
       'Fecha Vencimiento': '2024-02-01',
-      'Asignado A': 'abogado@Velmiga.com',
+      'Asignado A': 'abogado@Vilmega.com',
       'Plantillas': 'Demanda de Divorcio, Poder'
     }
   ];
@@ -816,7 +816,7 @@ export function downloadImportTemplate(): void {
   XLSX.utils.book_append_sheet(wb, wsTemplates, 'Plantillas');
   
   // Descargar archivo
-  XLSX.writeFile(wb, 'plantilla_importacion_Velmiga.xlsx');
+  XLSX.writeFile(wb, 'plantilla_importacion_Vilmega.xlsx');
 }
 
 /**
@@ -881,7 +881,7 @@ export async function exportCasesWithTemplates(cases: CaseWithRelations[]): Prom
     ws['!cols'] = wscols;
     
     XLSX.utils.book_append_sheet(wb, ws, 'Casos');
-    XLSX.writeFile(wb, `casos_Velmiga_${new Date().toISOString().split('T')[0]}.xlsx`);
+    XLSX.writeFile(wb, `casos_Vilmega_${new Date().toISOString().split('T')[0]}.xlsx`);
   } catch (error) {
     console.error('Error exportando casos:', error);
     throw new Error('Error al exportar casos a Excel');

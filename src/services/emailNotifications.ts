@@ -32,7 +32,7 @@ class EmailNotificationService {
   async sendEmail(options: EmailNotificationOptions): Promise<void> {
     try {
       await this.transporter.sendMail({
-        from: `Velmiga <${process.env.EMAIL_USER}>`,
+        from: `Vilmega <${process.env.EMAIL_USER}>`,
         to: options.to.join(', '),
         subject: options.subject,
         text: options.text,
@@ -73,7 +73,7 @@ ${event.description ? `Descripción: ${event.description}` : ''}
 Por favor, asegúrese de estar preparado/a para este evento.
 
 Saludos cordiales,
-Velmiga
+Vilmega
     `.trim();
 
     const html = `
@@ -97,7 +97,7 @@ Velmiga
     <body>
         <div class="container">
             <div class="header">
-                <h1>⚖️ Velmiga</h1>
+                <h1>⚖️ Vilmega</h1>
                 <span class="reminder-badge">Recordatorio de Evento</span>
             </div>
             <div class="content">
@@ -122,10 +122,10 @@ Velmiga
 
                 <p>Por favor, asegúrese de estar preparado/a para este evento y tener toda la documentación necesaria.</p>
                 
-                <p><em>Este es un recordatorio automático generado por el Velmiga.</em></p>
+                <p><em>Este es un recordatorio automático generado por el Vilmega.</em></p>
             </div>
             <div class="footer">
-                Velmiga - Gestión Jurídica Integral
+                Vilmega - Gestión Jurídica Integral
             </div>
         </div>
     </body>
@@ -166,7 +166,7 @@ ${event.description ? `Descripción: ${event.description}` : ''}
 
 Recibirá un recordatorio 24 horas antes del evento.
 
-Velmiga
+Vilmega
     `.trim();
 
     const html = `
@@ -190,7 +190,7 @@ Velmiga
     <body>
         <div class="container">
             <div class="header">
-                <h1>⚖️ Velmiga</h1>
+                <h1>⚖️ Vilmega</h1>
                 <span class="new-badge">Nuevo Evento</span>
             </div>
             <div class="content">
@@ -215,7 +215,7 @@ Velmiga
                 <p>Recibirá un recordatorio automático 24 horas antes del evento.</p>
             </div>
             <div class="footer">
-                Velmiga - Gestión Jurídica Integral
+                Vilmega - Gestión Jurídica Integral
             </div>
         </div>
     </body>

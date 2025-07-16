@@ -87,7 +87,7 @@ export function NewTemplateModal({ children, onTemplateCreated }: NewTemplateMod
               exit={{ scale: 0.9, opacity: 0 }}
               className="bg-white rounded-2xl w-full max-w-7xl max-h-[95vh] flex flex-col shadow-2xl"
             >
-              {/* Header con branding Velmiga */}
+              {/* Header con branding Vilmega */}
               <div className="relative bg-[#B8860B] text-white p-6">
                 <div className="flex items-center justify-between">
                   <div className="flex items-center gap-4">
@@ -95,7 +95,7 @@ export function NewTemplateModal({ children, onTemplateCreated }: NewTemplateMod
                       <Sparkles className="h-6 w-6" />
                     </div>
                     <div>
-                      <h2 className="text-xl font-semibold">Nueva Plantilla - Velmiga</h2>
+                      <h2 className="text-xl font-semibold">Nueva Plantilla - Vilmega</h2>
                       <p className="text-yellow-100 text-sm">Crea plantillas legales profesionales</p>
                     </div>
                   </div>
@@ -189,7 +189,7 @@ export function NewTemplateModal({ children, onTemplateCreated }: NewTemplateMod
               <div className="border-t border-yellow-200 bg-yellow-50 p-6">
                 <div className="flex items-center justify-between">
                   <div className="text-sm text-[#B8860B]">
-                    <span className="font-medium">Velmiga</span> - Sistema de Gestión Legal
+                    <span className="font-medium">Vilmega</span> - Sistema de Gestión Legal
                   </div>
                   <div className="flex gap-3">
                     <Button 

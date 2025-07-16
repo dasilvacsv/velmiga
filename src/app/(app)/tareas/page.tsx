@@ -44,7 +44,7 @@ export default async function TareasPage() {
                   </div>
                   <div>
                     <h1 className="text-2xl font-bold bg-gradient-to-r from-emerald-700 to-green-600 bg-clip-text text-transparent font-raleway">
-                      Velmiga - Gestión de Tareas
+                      Vilmega - Gestión de Tareas
                     </h1>
                     <p className="text-sm text-gray-600">
                       Sistema de asignación y seguimiento de tareas legales con carga optimizada
